@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    
+    <script>
+        const orderData = {
+
+            'Below 500': 20,
+            '500-1000': 29,
+            '1000-1500': 30,
+            '1500-2000': 44,
+            'Above 2000': 76
+    }; 
+    const total = Object.values(orderData).reduce(( first, second ) => first + second, 0);
+    console.log(`Total number of orders placed = ${total}`);
+    const proportion = Object.keys(orderData).map((key, index)=>({
+        id: index + 1
+    }))
+    
+    console.log(`Total number of order proportions = ${proportion.length}`);
+
+
+    // C1
+    const result =Object.keys(orderData).map((key, index)=>({
+      id: index + 1,
+      order: key,
+      order_percentage: (100 * orderData[key] / total).toFixed(2),
+      'restaurant': 'Punjabi Tadka'
+    }))
+    
+ //C2
+    console.log(result)
+    </script>
+</body>
+</html>

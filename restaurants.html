@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    
+
+    <script>
+            class resturant_Manager{       
+    resturant_list =[
+        {
+            name:"Kailash", address:"kranti Chowk",city:"Aurangabad"
+        },
+        {
+            name:"Smile", address:"Beed by Pass",city:"Nagar"
+        },
+        {
+            name:"Mac D", address:"Airport Road",city:"Jalgaow"
+        },
+        {
+            name:"Pizza Hut", address:"Namkom Market",city:"Aurangabad"
+        },
+        {
+            name:"Dewaki", address:"Nashik road",city:"Nashik"
+        }
+    ];
+
+// PrintAllResturantNames, Type- Function , Arguments type-none 
+             printAllResturantNames(){
+    this.resturant_list.forEach((restro) => {
+        console.log(restro.name);
+    });
+}
+// 
+// FilterResturant
+filterResturantByCity(city){
+    let restaurantarray = this.resturant_list.filter(item=>item.city==city);
+	console.log("Filtered by ",city,restaurantarray)  
+}
+
+}
+
+let obj = new resturant_Manager();
+obj.printAllResturantNames();
+obj.filterResturantByCity("Aurangabad");
+    </script>
+</body>
+</html>
